@@ -35,33 +35,12 @@ int binexp(int a,int b){
     }
     return res%1000000007;
 }
-vi primes;
-int p[1000006];
-void sieve(){
-    primes.pb(2);
-    for(int i=3;i<100000;i+=2)p[i]=1;
-    for(int i=3;i<100000;i+=2){
-        if(p[i]){
-            primes.pb(i);
-            for(int j=2*i;i*i<100000;j+=i){
-                p[j]=0;
-            }
-        }
-    }
-}
+//CODE FOR SIEVE 
+vi primes;int p[1000006];void sieve(){primes.pb(2);for(int i=3;i<100000;i+=2){p[i]=1;}    for(int i=3;i<100000;i+=2){if(p[i]){primes.pb(i);for(int j=2*i;i*i<100000;j+=i){p[j]=0;}}}}
+//SIEVE ENDS HERE 
 void fun()
 {
-    string s;cin>>s;
-    int a[26],c=0,d=0;
-    for(int i=0;i<26;i++)a[i]=0;
-    for(int i=0;i<s.size();i++){
-        a[s[i]-'a']++;
-    }
-    for(int i=0;i<26;i++){
-        if(a[i]==1)c++;
-        else if(a[i]>1)d++;
-    }
-    cout<<d+c/2<<endl;
+    // MAIN CODE TO BE WRITTEN HERE 
   
 }
 main()
